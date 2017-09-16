@@ -4,86 +4,86 @@ require 'minitest/autorun'
 
 require 'dry/prelude'
 
-describe DRY.method(:bool) do
+describe DRY.method(:Bool) do
   # TODO
 end
 
-describe DRY.method(:char) do
+describe DRY.method(:Char) do
   # TODO
 end
 
-describe DRY.method(:complex) do
+describe DRY.method(:Complex) do
   # TODO
 end
 
-describe DRY.method(:float) do
+describe DRY.method(:Float) do
   # TODO
 end
 
-describe DRY.method(:float32) do
+describe DRY.method(:Float32) do
   # TODO
 end
 
-describe DRY.method(:float64) do
+describe DRY.method(:Float64) do
   # TODO
 end
 
-describe DRY.method(:int) do
+describe DRY.method(:Int) do
   # TODO
 end
 
-describe DRY.method(:int8) do
+describe DRY.method(:Int8) do
   # TODO
 end
 
-describe DRY.method(:int16) do
+describe DRY.method(:Int16) do
   # TODO
 end
 
-describe DRY.method(:int32) do
+describe DRY.method(:Int32) do
   # TODO
 end
 
-describe DRY.method(:int64) do
+describe DRY.method(:Int64) do
   # TODO
 end
 
-describe DRY.method(:int128) do
+describe DRY.method(:Int128) do
   # TODO
 end
 
-describe DRY.method(:integer) do
+describe DRY.method(:Integer) do
   # TODO
 end
 
-describe DRY.method(:natural) do
+describe DRY.method(:Natural) do
   # TODO
 end
 
-describe DRY.method(:rational) do
+describe DRY.method(:Rational) do
   # TODO
 end
 
-describe DRY.method(:real) do
+describe DRY.method(:Real) do
   # TODO
 end
 
-describe DRY.method(:word) do
+describe DRY.method(:Word) do
   # TODO
 end
 
-describe DRY.method(:word8) do
+describe DRY.method(:Word8) do
   # TODO
 end
 
-describe DRY.method(:word16) do
+describe DRY.method(:Word16) do
   # TODO
 end
 
-describe DRY.method(:word32) do
+describe DRY.method(:Word32) do
   # TODO
 end
 
-describe DRY.method(:word64) do
+describe DRY.method(:Word64) do
   # TODO
 end
