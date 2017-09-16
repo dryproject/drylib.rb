@@ -1,35 +1,41 @@
+BUNDLE ?= bundle
+GEM    ?= gem
 PANDOC ?= pandoc
 
-PACKAGE :=
+PACKAGE := drylib
 VERSION := $(shell cat VERSION)
 
-SOURCES :=
+SOURCES := $(wildcard lib/*.rb lib/*/*.rb)
 
-TARGETS :=
+TARGETS := pkg/$(PACKAGE)-$(VERSION).gem
 
 %.html: %.rst
 	$(PANDOC) -o $@ -t html5 -s $<
+
+pkg/$(PACKAGE)-$(VERSION).gem: drylib.gemspec $(SOURCES)
+	$(BUNDLE) exec rake build
 
 all: build
 
 build: $(TARGETS)
 
-check:
-	@echo "not implemented"; exit 2 # TODO
+check: Rakefile
+	$(BUNDLE) exec rake spec
 
-dist:
-	@echo "not implemented"; exit 2 # TODO
+dist: $(TARGETS)
 
-install:
-	@echo "not implemented"; exit 2 # TODO
+install: Rakefile $(TARGETS)
+	$(BUNDLE) exec rake install
 
 uninstall:
-	@echo "not implemented"; exit 2 # TODO
+	$(GEM) uninstall drylib --version $(VERSION)
 
-clean:
+clean: Rakefile
+	$(BUNDLE) exec rake clean
 	@rm -f *~ $(TARGETS)
 
-distclean: clean
+distclean: Rakefile clean
+	$(BUNDLE) exec rake clobber
 
 mostlyclean: clean
 
