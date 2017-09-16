@@ -20,7 +20,7 @@ all: build
 build: $(TARGETS)
 
 check: Rakefile
-	$(BUNDLE) exec rake spec
+	$(BUNDLE) exec rake test
 
 dist: $(TARGETS)
 
