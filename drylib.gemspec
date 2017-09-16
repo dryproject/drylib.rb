@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.email              = 'arto@dryproject.org'
 
   gem.platform           = Gem::Platform::RUBY
-  gem.files              = %w(AUTHORS README UNLICENSE VERSION) + Dir.glob('lib/**/*.rb')
+  gem.files              = %w(AUTHORS UNLICENSE VERSION) + Dir.glob('lib/**/*.rb')
   gem.bindir             = %q(bin)
   gem.executables        = %w()
   gem.default_executable = gem.executables.first

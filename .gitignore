@@ -6,3 +6,9 @@
 
 # rst2html outputs
 *.html
+
+# Ruby artifacts
+.bundle
+.yardoc
+*.gem
+Gemfile.lock
