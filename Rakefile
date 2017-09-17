@@ -3,8 +3,6 @@ require 'bundler/setup'
 require 'bundler/gem_tasks'
 require 'rake/clean'
 require 'rake/testtask'
-require 'yard'
-require 'yard/rake/yardoc_task'
 
 GEMSPEC = Gem::Specification.load(Dir.glob('*.gemspec').first)
 
@@ -18,9 +16,15 @@ Rake::TestTask.new do |t|
   t.warning = true
 end
 
-YARD::Rake::YardocTask.new do |t|
-  t.options += ['--title', "%s %s: %s" %
-    [GEMSPEC.name, GEMSPEC.version, GEMSPEC.summary.chomp('.')]]
+begin
+  require 'yard'
+  require 'yard/rake/yardoc_task'
+
+  YARD::Rake::YardocTask.new do |t|
+    t.options += ['--title', "%s %s: %s" %
+      [GEMSPEC.name, GEMSPEC.version, GEMSPEC.summary.chomp('.')]]
+  end
+rescue LoadError
 end
 
 task :default => :test
