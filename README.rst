@@ -10,6 +10,10 @@ DRYlib for Ruby
    :alt: Travis CI build status
    :target: https://travis-ci.org/dryproject/drylib.rb
 
+.. image:: https://img.shields.io/gem/v/drylib.svg
+   :alt: RubyGems gem version
+   :target: https://rubygems.org/gems/drylib
+
 |
 
 http://drylib.org
