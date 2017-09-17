@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 gemspec
 
 group :development do
-  gem 'rake'
   gem 'redcarpet'
   gem 'yard'
 end
@@ -10,4 +9,5 @@ end
 group :development, :test do
   gem 'minitest'
   gem 'minitest-reporters'
+  gem 'rake'
 end
