@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby -rubygems
 require 'bundler/setup'
 require 'bundler/gem_tasks'
+require 'rake/clean'
 require 'rake/testtask'
 require 'yard'
 require 'yard/rake/yardoc_task'
@@ -25,3 +26,6 @@ end
 task :default => :test
 
 task :irb do require 'irb'; ARGV.clear; IRB.start end
+
+CLEAN.include('*.html')
+CLOBBER.include('Gemfile.lock')
